@@ -19,7 +19,7 @@
 
 
 \title{CIS 6930: Trustworthy Machine Learning\\
-	\Large Project Proposal: Title of the Project} %% TODO: replace with the title of your project
+	\Large Project Proposal: Decrypting job classification model} %% TODO: replace with the title of your project
 
 %% TODO: your name and email go here (all members of the group)
 %% Comment out as needed and designate a point of contact
@@ -58,10 +58,24 @@ Determine whether explainable / interpretable ML techniques like LIME and others
 
 A model's accuracy is not always enough to state weather it will perform well in the wild because the accuracy highly depends the data that was used to train and test the model. 
 Explaining the results of a model, and identifying what lead to a particular classification can help provide insights into the model.
-Once you add interpretability to the model, its result can be easily understood by a domain expert can be verified for correctness. This greatly enhances the trustworthyness of the model.
+Once you add interpretability to the model, its result can be easily understood by a domain expert can be verified for correctness. This greatly enhances the trustworthiness of the model.
 
 
 We are proposing to build a text classification model and explaining the results using LIME, and validate if LIME is able to provide stable and meaningful features. 
+
+
+----Reference links:
+1. Explaining the Explainer: A First Theoretical Analysis of LIME 
+http://proceedings.mlr.press/v108/garreau20a/garreau20a.pdf
+
+2. An Analysis of Reliability Using LIME with Deep Learning Models 
+https://dais-ita.org/sites/default/files/2534.pdf
+
+3. “Why Should I Trust You?” Explaining the Predictions of Any Classifier 
+https://arxiv.org/pdf/1602.04938.pdf
+
+4. http://ceur-ws.org/Vol-2646/18-paper.pdf
+>>>>>>> ec77c2d17e61d56396852d1b1878c0929f3944d9
 
 %% TODO: write your background and related work
 %% Must contain:
@@ -71,18 +85,21 @@ We are proposing to build a text classification model and explaining the results
 %%
 \section{Background and Related Work}
 
+Model interpratability techniques have been in place from the last couple of years, but they are not always able to provide stable inferences for a given problem. 
+A couple of recent examples include the work done on inferencing medical...
+TODO: add citation
+
+Anther important piece of work was in categorizing resume using CNN and then finding inference using LIME
+TODO: add citation
 
 
 
 
-Since the data contains technical words which are sometimes outside of the english vocabulary, we are going to tune word embeddings for the problem domain.
+Since the data contains technical words which are sometimes outside of the english vocabulary, we are going to tune word embedding for the problem domain.
 
 
 
 % TODO:
-Write here.
-
-You can cite related publications like so~\cite{vapnik1994measuring} and non-publications (e.g., websites) like so\footnote{Google scholar: \url{https://scholar.google.com}}.
 
 
 %% TODO: write your proposed approach and describe your plan
@@ -124,6 +141,9 @@ Following is the approach we are going to take:
 
 6. Manually validate LIME output
 
+
+For the test and experimentation we are currently foreseeing that the local machine would be sufficient for carrying out the work. If needed we will use the hyper-gator resources that are availed to us as part of this project. 
+
 \begin{figure}[h!]
 	\centering
 	\begin{subfigure}[b]{0.4\linewidth}
@@ -142,7 +162,7 @@ Following is the approach we are going to take:
 \section{Timeline}
 
 % TODO:
-\begin{figure}
+\begin{figure}[h!]
 	
 	
 	\begin{center}
