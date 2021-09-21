@@ -1,7 +1,9 @@
 \documentclass[11pt,letterpaper]{article}
 
+\usepackage{pgfgantt}
 \usepackage[letterpaper,margin=0.75in,nohead]{geometry}
-
+\usepackage{graphicx}
+\usepackage{subcaption}
 \usepackage[colorlinks]{hyperref}
 \usepackage{url}
 \usepackage{breakurl}
@@ -54,7 +56,12 @@
 
 Determine whether explainable / interpretable ML techniques like LIME and others can provide useful insights into the cause of the unfairness.
 
-A model's accuracy is not always enough to state weather it will perform well in the wild because the accuracy highly depends the data that was used to train and test the model. Explaining the results of a model, and identifying what lead to a particular classification can help provide insights into the model, this output can then be verified by a domain exterm to validate if the model can be trustworthy.
+A model's accuracy is not always enough to state weather it will perform well in the wild because the accuracy highly depends the data that was used to train and test the model. 
+Explaining the results of a model, and identifying what lead to a particular classification can help provide insights into the model.
+Once you add interpretability to the model, its result can be easily understood by a domain expert can be verified for correctness. This greatly enhances the trustworthyness of the model.
+
+
+We are proposing to build a text classification model and explaining the results using LIME, and validate if LIME is able to provide stable and meaningful features. 
 
 %% TODO: write your background and related work
 %% Must contain:
@@ -63,6 +70,14 @@ A model's accuracy is not always enough to state weather it will perform well in
 %% - Why is your proposal novel? What are you proposing to do different?
 %%
 \section{Background and Related Work}
+
+
+
+
+
+Since the data contains technical words which are sometimes outside of the english vocabulary, we are going to tune word embeddings for the problem domain.
+
+
 
 % TODO:
 Write here.
@@ -83,7 +98,6 @@ You can cite related publications like so~\cite{vapnik1994measuring} and non-pub
 \section{Proposed Approach \& Plan}
 
 % TODO:
-Write here.
 
 
 %% TODO: Write a short timeline of your project
@@ -94,10 +108,83 @@ Write here.
 %%
 %% Keep in mind the project milestones must include mid semester report
 %%
+
+Following is the approach we are going to take:
+
+
+1. Fetch data and take samples as per the distribution of data for train, test and validation
+
+2. Clean and vectorize the data for Neural Network (NN) approach
+
+3. Build a NN architecture to learn classification labels
+
+4. Train, test and validate the neural network
+
+5. Use LIME for model inferencing
+
+6. Manually validate LIME output
+
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[b]{0.4\linewidth}
+		\includegraphics[width=\linewidth]{images/resume.png}
+		\caption{Example Input}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.4\linewidth}
+		\includegraphics[width=\linewidth]{images/job_title.png}
+		\caption{Model prediction}
+	\end{subfigure}
+	\caption{Model output description}
+	\label{fig:coffee}
+\end{figure}
+
+
 \section{Timeline}
 
 % TODO:
-Write here.
+\begin{figure}
+	
+	
+	\begin{center}
+		
+		\begin{ganttchart}[y unit title=0.4cm,
+			y unit chart=0.5cm,
+			vgrid,hgrid, 
+			title label anchor/.style={below=-1.6ex},
+			title left shift=.05,
+			title right shift=-.05,
+			title height=1,
+			progress label text={},
+			bar height=0.7,
+			group right shift=0,
+			group top shift=.6,
+			group height=.3]{1}{30}
+			%labels
+			\gantttitle{September 27 - December 7}{30} \\
+			\gantttitle{Week1}{3} 
+			\gantttitle{Week2}{3} 
+			\gantttitle{Week3}{3} 
+			\gantttitle{Week4}{3} 
+			\gantttitle{Week5}{3} 
+			\gantttitle{Week6}{3} 
+			\gantttitle{\color{red}Mid Sem}{3}
+			\gantttitle{Week8}{3} 
+			\gantttitle{Week9}{3} 
+			\gantttitle{Week10}{3} \\
+			%tasks
+			\ganttbar{Research}{1}{6} \\
+			\ganttbar{Data sampling}{4}{7} \\
+			\ganttbar{Data preprocessing}{6}{12} \\
+			\ganttbar{NN architecture}{10}{15} \\
+			\ganttbar[]{Model training}{15}{22} \\
+			\ganttbar{Model inferencing}{22}{26} \\
+			\ganttbar{LIME validation}{24}{28} \\
+			\ganttbar[]{Output generation}{27}{30}
+			
+		\end{ganttchart}
+	\end{center}
+	\caption{Gantt Chart}
+\end{figure}
 
 %%%%
 

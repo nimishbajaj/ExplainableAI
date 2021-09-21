@@ -1,0 +1,8 @@
+\begin{thebibliography}{1}
+
+\bibitem{vapnik1994measuring}
+Vladimir Vapnik, Esther Levin, and Yann~Le Cun.
+\newblock Measuring the vc-dimension of a learning machine.
+\newblock {\em Neural computation}, 6(5):851--876, 1994.
+
+\end{thebibliography}
