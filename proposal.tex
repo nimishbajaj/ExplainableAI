@@ -130,11 +130,10 @@
 
 A model's accuracy is not always enough to state whether it will perform well in the wild because the accuracy highly depends on the data that was used to train and test the model. 
 Explaining the results of a model, and identifying what leads to a particular classification can help provide insights into the model.
-Once you add interpretability to the model, its result can be easily understood by a domain expert can be verified for correctness. This greatly enhances the trustworthiness of the model.
+Once you add model interpretability, output can be easily understood by a domain expert and can be verified for correctness. This greatly enhances the trustworthiness of the model.
 
 
-We are proposing to build a text classification model and explaining the results using LIME, and validate if LIME can provide stable and meaningful features. 
-
+We are proposing to build a text classification model for a resume corpus and explain the results using LIME, and validate if LIME can provide stable and meaningful features. 
 
 %% TODO: write your background and related work
 %% Must contain:
@@ -147,10 +146,11 @@ We are proposing to build a text classification model and explaining the results
 Model interpretation techniques have been in place for the last couple of years, but they are not always able to provide stable inferences for a given problem. 
 Work done on inference healthcare model\cite{Rasheed2021}, Perturbing Inputs for Fragile Interpretations in Deep Natural Language Processing \cite{sinha2021perturbing} and many more have a common objective, i.e. to have robust interpretations for determining the trustworthiness of the model.
 
-For our project, we are planning to decrypt the Job classification model on \href{https://github.com/florex/resume_corpus/blob/master/resumes_corpus.zip}{Resume corpus}. Our work will include categorizing resumes using CNN and RNN. We are going to train Neural Network and use the inference technique 'LIME'. Since the data contains technical words which are sometimes outside of the English vocabulary, we are going to tune word embedding for the problem domain.
+For our project, we are planning to decrypt the Job classification model on \href{https://github.com/florex/resume_corpus/blob/master/resumes_corpus.zip}{Resume corpus}. Our work will include categorizing resumes using CNN and RNN. We are going to train Neural Network and use the inference technique 'LIME'. 
+%%Since the data contains technical words which are sometimes outside of the English vocabulary, we are going to tune word embedding for the problem domain.
 
 
-Existing work has explored a CNN for training a classification model, as part of the project we will be using an RNN to learn the temporal features. The data contains technical words which are sometimes outside of the English vocabulary, we are going to tune word embedding for the problem domain by utilizing the training dataset and other datasets from the same domain.
+Existing work has explored a CNN for training a classification model, as part of the project we will be using an CNN as well as RNN to learn the temporal features. The data contains technical words which are sometimes outside of the English vocabulary, we are going to tune pre-trained word embedding for the problem domain by utilizing the training dataset and other datasets from the same domain.
 
 
 % TODO:
